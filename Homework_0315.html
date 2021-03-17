@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<!-- saved from url=(0035)https://mujimono.azurewebsites.net/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head><body><mimemap fileextension="webp" mimetype="image/webp">
+    <link rel="stylesheet" href="./Homework_0315_files/top.css">
+    <title>樹懶神</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .wrap {
+            width: 1200px;
+            background-color: rgba(250,250,250,0.5);
+            margin: auto;
+            display:flex;
+        }
+        .box{
+            width: 100%;
+            margin: 0 15px 10px;
+        }
+        .box img{
+            width: 100%;
+            display: block;
+        }
+        .food{
+            position: relative;
+        }
+        .food::before{
+            cursor:pointer;
+            position: absolute;
+            width: 100%;
+            height: 40px;
+            bottom: 0px;
+            line-height: 40px;
+            content: "加入購物車";
+            text-align: center;
+            background-color: rgba(0,0,0,0.6);
+            color: white;
+            visibility: hidden;
+        }
+        .food:hover::before{
+            visibility:visible;
+        }
+        .food :hover{
+            cursor:pointer;
+        }
+        span{
+            font-size: 14px;
+            font-family: 微軟正黑體;
+            color: rgba(0,0,0,0.6);
+        }
+        p.discount{
+            text-decoration: line-through;
+        }
+        p{
+            margin: 3px;
+        }
+        .show_slider div{
+            display: none;
+        }
+        .show_slider div:nth-child(1){
+            display: block;
+        }
+    </style>
+
+
+    <div class="album">
+        <div class="box" style="margin: 0;">
+            <div class="show_slider">
+                <!-- <img src="" alt="" class="show_photo"> -->
+                <div><img src="./Homework_0315_files/1000x.webp" alt=""></div>
+                <div><img src="./Homework_0315_files/1000x(1).webp" alt=""></div>
+                <div><img src="./Homework_0315_files/1000x(2).webp" alt=""></div>
+                <div><img src="./Homework_0315_files/1000x(3).webp" alt=""></div>
+                <div><img src="./Homework_0315_files/1000x(4).webp" alt=""></div>
+                <div><img src="./Homework_0315_files/1000x(5).webp" alt=""></div>
+                <div><img src="./Homework_0315_files/1000x(6).webp" alt=""></div>
+                <div><img src="./Homework_0315_files/1000x(7).webp" alt=""></div>
+            </div>
+        </div>
+    </div>
+    <!-- <div class="wrap">
+        <div class="box">
+            <div class="food"><span>O</span></div>
+        </div>
+        <div class="box">
+            <div class="food"><span>O</span></div>
+        </div>
+        <div class="box">
+            <div class="food"><span>O</span></div>
+        </div>
+        <div class="box">
+            <div class="food"><span>O</span></div>
+        </div>
+        <div class="box">
+            <div class="food"><span>O</span></div>
+        </div>
+        <div class="box">
+            <div class="food"><span>O</span></div>
+        </div>
+        <div class="box">
+            <div class="food"><span>O</span></div>
+        </div>
+        <div class="box">
+            <div class="food"><span>O</span></div>
+        </div>
+    </div> -->
+    <div class="wrap">
+        <div class="box">
+            <div class="top"><img src="./Homework_0315_files/1800x (2).webp" alt=""></div>
+        </div>
+    </div>
+    <div class="wrap">
+        <div class="box">
+            <div class="food"><img src="./Homework_0315_files/800x (4).webp" alt=""></div>
+            <span>賈以食日-拌雙粉 醋香豆瓣（1袋/3入）<p class="discount">NT$249</p><p class="price">NT$230</p></span>
+        </div>
+        <div class="box">
+            <div class="food"><img src="./Homework_0315_files/800x (5).webp" alt=""></div>
+            <span>賈以食日-拌雙粉 醋香豆瓣（16袋/48入）<p class="discount">NT$3,984</p><p class="price">NT$3,580</p></span>
+        </div>
+    </div>
+    <div class="wrap">
+        <div class="box">
+            <div class="food"><img src="./Homework_0315_files/1800x (1).webp" alt=""></div>
+            <span>賈以食日-角落小夥伴 寶貝麵三入綜合提袋組<p class="discount">NT$530</p><p class="price">NT$499</p></span>
+        </div>
+    </div>
+    <div class="wrap">
+        <div class="box">
+            <div class="food"><img src="./Homework_0315_files/600x (3).webp" alt=""></div>
+            <span>賈以食日-角落小夥伴 寶貝麵（經典原味）<p class="price">NT$159</p></span>
+        </div>
+        <div class="box">
+            <div class="food"><img src="./Homework_0315_files/600x (4).webp" alt=""></div>
+            <span>賈以食日-角落小夥伴 寶貝麵（綜合蔬菜）<p class="price">NT$159</p></span>
+        </div>
+        <div class="box">
+            <div class="food"><img src="./Homework_0315_files/600x (5).webp" alt=""></div>
+            <span>賈以食日-角落小夥伴 寶貝麵（南瓜地瓜）<p class="price">NT$159</p></span>
+        </div>
+    </div>
+    <div class="wrap">
+        <div class="box">
+            <div class="food"><img src="./Homework_0315_files/800x (6).webp" alt=""></div>
+            <span>賈以食日-干貝鍋燒意麵<p class="discount">NT$150</p><p class="price">NT$138</p></span>
+        </div>
+        <div class="box">
+            <div class="food"><img src="./Homework_0315_files/800x.webp" alt=""></div>
+            <span>賈以食日-干貝鍋燒意麵（1箱/16盒）<p class="discount">NT$2,400</p><p class="price">NT$2,080</p></span>
+        </div>
+    </div>
+    <div class="wrap">
+        <div class="box">
+            <div class="food"><img src="./Homework_0315_files/800x (1).webp" alt=""></div>
+            <span>賈以食日-泰式酸辣粉（1盒/3入）<p class="discount">NT$238</p><p class="price">NT$220</p></span>
+        </div>
+        <div class="box">
+            <div class="food"><img src="./Homework_0315_files/800x (2).webp" alt=""></div>
+            <span>賈以食日–泰式酸辣粉（1箱/16盒）<p class="discount">NT$3,808</p><p class="price">NT$3,360</p></span>
+        </div>
+    </div>
+    <div class="wrap">
+        <div class="box">
+            <div class="top"><img src="./Homework_0315_files/1800x (3).webp" alt=""></div>
+        </div>
+    </div>
+    <div class="wrap">
+        <div class="box">
+            <div class="food"><img src="./Homework_0315_files/600x.webp" alt=""></div>
+            <span>賈以食日-麻花麵（1袋/4入)<p class="price">NT$268</p></span>
+        </div>
+        <div class="box">
+            <div class="food"><img src="./Homework_0315_files/600x (1).webp" alt=""></div>
+            <span>賈以食日-燒椒麵（1袋/4入）<p class="price">NT$268</p></span>
+        </div>
+        <div class="box">
+            <div class="food"><img src="./Homework_0315_files/600x (2).webp" alt=""></div>
+            <span>賈以食日-麻薑麵（1袋/4入)<p class="price">NT$268</p></span>
+        </div>
+    </div>
+    <div class="wrap">
+        <div class="box">
+            <div class="food"><img src="./Homework_0315_files/800x (7).webp" alt=""></div>
+            <span>賈以食日-麻辣鴨血冬粉<p class="price">NT$159</p></span>
+        </div>
+        <div class="box">
+            <div class="food"><img src="./Homework_0315_files/800x (8).webp" alt=""></div>
+            <span>賈以食日-麻辣鴨血冬粉（1箱/20盒）<p class="price">NT$3,180</p></span>
+        </div>
+    </div>
+    <div class="wrap">
+        <div class="box">
+            <div class="food"><img src="./Homework_0315_files/800x (3).webp" alt=""></div>
+            <span>賈以食日-雪莓餅 (期間限定，售完為止)<p class="discount">NT$250</p><p class="price">NT$230</p></span>
+        </div>
+        <div class="box">
+            <div class="food"><img src="https://mujimono.azurewebsites.net/" alt=""></div>
+            <span><p class="discount" <="" p=""></p><p class="price"></p></span>
+        </div>
+    </div>
+    <div class="wrap">
+        <div class="box">
+            <div class="top"><img src="./Homework_0315_files/1800x (4).webp" alt=""></div>
+        </div>
+    </div>
+    <div class="wrap">
+        <div class="box">
+            <div class="food"><img src="./Homework_0315_files/1800x.webp" alt="" style="opacity: 0.5;"></div>
+            <span>賈以食日-2021 HAPPY 牛 YEAR 福箱<p class="price">NT$999</p></span>
+        </div>
+    </div>
+
+</mimemap></body></html>

@@ -123,13 +123,13 @@
          
 <style>
          .pict {
-           font-size:medium;
+           font-size:x-large;
           
                 position: absolute;
                 top: 30vh;
                 left: 0;
-                width: 20%;
-                height: 20%;
+            /*     width: 20%;
+                height: 20%; */
                 background-color: black;
                 color:white;
                 opacity: .5;
@@ -145,8 +145,8 @@
     /* position:absolute; */
     /* left:0; */
     
-    width:200px;
-    height:200px;
+    width:350px;
+    height:220px;
     background:black;
     animation-name:oxxo;
     animation-duration:2s;
@@ -178,6 +178,84 @@
     }
    }   
 
+  .item1 {
+    position:absolute;
+    top: 29vh;
+    left: 0;
+    width: 350px;
+    height: 135px;
+    background-color: red;
+    font-size: xx-large;
+    color:white;
+   }
+
+   .item2{
+
+background-color: bisque;
+width: 200px;
+height: 100px;
+/* flex-grow: 1; */
+}
+
+.item3{
+background-color: chartreuse;
+width: 200px;
+height: 100px;
+
+/* flex-grow: 2; */
+
+}
+
+.item4{
+background-color: darkgoldenrod;
+width: 200px;
+height:100PX;
+overflow: hidden;
+/* flex-grow: 1; */
+}
+
+.box .txt{
+position: absolute;
+top: o;
+left: 0;
+width: 100%;
+height: 100%;
+background-color: dimgray;
+color:gold;
+opacity: .5;
+transition:top 1s 0s, opacity 1s 1s;
+}
+
+/* .wrap{
+/* /*background-color: rgb(237, 255, 196); */
+/* display: flex;
+height: 300px;
+/* font-size: x-large; */
+/*overflow: auto;
+margin: 3px;
+border-color: darkblue; */
+/* flex-basis: 50px; */
+
+*/ */
+
+.wrap{
+    position:absolute;
+    top: 30vh;
+    right: 0;
+    animation-name:oxxo2;
+    animation-duration:2s;
+    }
+   
+     @keyframes oxxo2{
+    from{
+        right:150px;
+    }
+    to{
+        right:500px;
+    }
+   }   
+
+
 </style>
              
                 
@@ -186,13 +264,20 @@
 
 
 </div>
-               
+<div class="wrap"> 
+<div class="item2">123 item2
+  <div class="item3">Lorem ipsum dolor sit amet consectetur adipisicAliquid.
+<div class="item4" >1234 item4
+
+</div>
+
               <div class="wrap">
+                <div class="item1">操控樂趣
                 <div class="pict">
                   <p>人人滿意的駕駛體驗 透過最佳重量分配,實現平順起步、直線穩定加速,過彎同時保持車身平穩,帶給駕駛更靈敏的道路反饋,享受隨心馳騁的行駛快感。</div>
                   </p>
                 </div>
-                  <img src="./assets/asset 45.png" alt="TOYOTA" class="mobile">
+                  <!-- <img src="./assets/asset 45.png" alt="TOYOTA" class="mobile"> -->
                   <div class="mp4">
                   <iframe width="700" height="425" src="https://www.youtube.com/embed/WH9kmoDw0fI" title="YouTube video player" frameborder="0" 
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

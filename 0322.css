@@ -1,0 +1,315 @@
+.outer-layer
+{
+    width: 1000px;
+    margin: auto;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+    
+.five-adv-wrap
+{
+    width: 1000px;
+    height: 100px;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+}
+
+.five-adv-wrap div
+{
+    width: 200px;
+    height: 31px;
+    display: flex;
+    justify-content: center;
+    border: 1px;
+    border-color: black black #AE0014;
+    border-style:dotted;
+    border-bottom-style: solid;
+    margin: 0px 10px 0px 0px;
+    background: linear-gradient(to top,white , #AE0014);
+    transition: background 0.3s;
+    background-size:1px 1000px;
+    background-position:0px 30px;
+}
+
+.five-adv-wrap div:nth-child(5)
+{
+    margin: 0px 0px 0px 0px;
+}
+
+.five-adv-wrap div:hover
+{
+    background-position:0px -10px;
+}
+
+.five-adv-wrap div:hover a
+{
+    font-size: 16px;
+    color: white;
+}
+
+.five-adv-wrap a
+{
+    margin: 0;
+    padding: 0;
+    color: black;
+    text-decoration: none;
+}
+
+.five-adv-wrap h2
+{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+#maindiv {
+		    position:absolute;
+			width: 350px;
+			height: 380px;
+			left:600px;
+			top:100;
+    		background-color:black;
+			font-size: x-large;
+			color: white;
+			animation-name:mov0;
+   			animation-duration:2s;
+
+    	}
+		
+		@keyframes mov0{
+		
+          from{
+               left:400px;
+              }
+          to{
+               left:500px;
+        	}
+        }
+	
+.main-left {	
+			width: 350px;
+			height: 140px;
+			color: white;
+			background-color: rgb(255, 0, 0);
+			font-size:xxx-large;
+			text-align:center;
+			display: flex;
+
+		}	
+
+
+.main-right {
+
+			writing-mode: vertical-lr;
+			width:5%;
+			color: white;
+			background-color: rgb(255, 0, 0);
+			font-size:60px;
+			text-align:center;
+			
+		}	
+
+.main-bottom {
+			width:95%;
+			color: white;
+			background-color: rgb(255, 0, 0);
+			font-size:xxx-large;
+			text-align:center;
+
+		}	
+
+
+iframe {
+			position:absolute;		
+			right:600px;
+			top:36vh;	
+    		animation-name:mov1;
+   			animation-duration:2s;
+		}
+
+		@keyframes mov1{
+          from{
+               right:400px;
+              }
+          to{
+               right:500px;
+        	}
+        }
+
+
+
+	
+.nav-item:hover {          
+			text-decoration:none;
+			background-color:0f0f0f;
+			color:rgb(172, 23, 185);
+		}
+
+.nav-item:active {
+			text-decoration:none;
+			background-color:rgb(161, 235, 200);
+			color:#f30c0c;
+		}
+
+.nav-item {
+    		width: 20%;
+
+		}
+
+.tab-content {
+		font-size: large;
+		color: #f30c0c;
+
+		}
+
+.container{
+		text-align:center;	
+		}
+
+.inn {
+			position: absolute;
+            width: 600px;
+			top:70vh;
+            margin-left: 70px;
+            padding: 20px;
+            background-color: rgb(238, 237, 237);
+			animation-name:mov2;
+   			animation-duration:2s;
+		}
+
+		@keyframes mov2{
+          from{
+			right: 300px;
+		  }
+          to{
+			right: 600px;
+		  }
+		}
+        
+
+.inn * {
+            margin: 0;
+        }
+
+        .inn .title {
+            margin-bottom: 15px;
+            font-size: 25px;
+            color: rgb(192, 6, 6);
+        }
+
+
+
+#maindiv2 {
+		    position:absolute;
+			width: 350px;
+			height: 380px;
+			right:600px;
+			top: 1000px;;
+    		background-color:black;
+			font-size: x-large;
+			color: white;
+			animation-name:mov5;
+   			animation-duration:2s;
+
+    	}
+		
+		@keyframes mov5{
+		
+          from{
+               right:300px;
+              }
+          to{
+               right:500px;
+        	}
+        }
+	
+.main-left-2 {	
+
+            writing-mode: vertical-lr;
+			width: 350px;
+			height: 140px;
+			color: white;
+			background-color: rgb(255, 0, 0);
+			font-size:xxx-large;
+			text-align:center;
+			display: flex;
+
+		}	
+
+
+
+.main-bottom2  {
+
+			/* writing-mode: vertical-lr; */
+			width:5%;
+			color: white;
+			background-color: rgb(255, 0, 0);
+			font-size:60px;
+			text-align:center;
+			
+		}	
+
+.main-right2 {
+			width:95%;
+			color: white;
+			background-color: rgb(255, 0, 0);
+			font-size:xxx-large;
+			text-align:center;
+
+		}	
+
+
+
+iframe2 {
+			position:absolute;		
+			right:600px;
+			top:900px;	
+    		animation-name:mov3;
+   			animation-duration:2s;
+		}
+
+		@keyframes mov3{
+          from{
+               right:400px;
+              }
+          to{
+               right:500px;
+        	}
+        }
+
+
+.inn2 {
+			position: absolute;
+            width: 600px;
+			top:1100px;
+            margin-left: 70px;
+            padding: 20px;
+            background-color: rgb(238, 237, 237);
+			animation-name:mov4;
+   			animation-duration:2s;
+		}
+
+		@keyframes mov4{
+          from{
+			left: 300px;
+		  }
+          to{
+			left: 600px;
+		  }
+		}
+        
+
+.inn2 * {
+            margin: 0;
+        }
+
+.title2 {
+            margin-bottom: 15px;
+            font-size: 25px;
+            color: rgb(192, 6, 6);
+        }
+
+

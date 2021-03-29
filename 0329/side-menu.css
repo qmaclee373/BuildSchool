@@ -1,0 +1,65 @@
+html, body{
+    height: 100%;
+}
+body{
+    background-color: #546377;
+}
+.side-menu{
+    width: 300px;
+    height: 100%;
+    padding: 50px 0;
+    box-sizing: border-box;
+    background: linear-gradient(45deg, #b0ae33,#19c230);
+    display: flex;
+    flex-direction: column;
+    box-shadow: 5px 0px 10px hsla(240, 50%, 20%, .6);
+}
+.side-menu form{
+    display: flex;
+    margin: 0 10px 50px;
+    border-radius: 100px;
+    border: 1px solid rgba(255, 255, 255, .4);
+}
+.side-menu input, .side-menu button{
+    border: none;
+    padding: 5px 10px;
+    background-color: transparent;
+    color: #fff;
+}
+.side-menu input:focus, .side-menu button:focus{
+    outline: none;
+}
+.side-menu input::placeholder{
+    color: #fff;
+}
+.side-menu input{
+    width: 230px;
+}
+.side-menu button{
+    width: 50px;
+}
+nav a{
+    display: block;
+    padding: 10px;
+    color: #fff;
+    text-decoration: none;
+    position: relative;
+}
+/* 若設定一般border會把整塊貼滿，不好看 */
+nav a + a::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 10px;
+    left: 10px;
+    border-top: 1px solid rgba(255, 255, 255, .4) ;
+}
+nav a .tou{
+    margin-right: -1.1em;
+    transform: scale(0);
+    transition: .3s;
+}
+nav a:hover .tou{
+    margin-right: 0em;
+    transform: scale(1);
+}

@@ -35,11 +35,11 @@ ul.drop-down-menu > li {
 
 }
 ul.drop-down-menu a:hover { /* 滑鼠滑入按鈕變色*/
-    background-color: #289fef;
+    background-color: #2867ef;
     color: #fff;
 }
 ul.drop-down-menu li:hover > a { /* 滑鼠移入次選單上層按鈕保持變色*/
-    background-color: #2885ef;
+    background-color: #284cef;
     color: #fff;
 }
 

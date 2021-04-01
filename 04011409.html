@@ -121,9 +121,9 @@
               <button type="button" class="btn btn-primary">2</button>
               <button type="button" class="btn btn-primary">3</button>
               <button type="button" class="btn btn-primary">4</button>
-            </div>
+            <!-- </div> -->
     
-            <div class="btn-group me-2" role="group" aria-label="Second group">
+            <!-- <div class="btn-group me-2" role="group" aria-label="Second group"> -->
               <button type="button" class="btn btn-secondary">5</button>
               <button type="button" class="btn btn-secondary">6</button>
               <button type="button" class="btn btn-secondary">7</button>
@@ -131,6 +131,9 @@
             
             <div class="btn-group" role="group" aria-label="Third group">
               <button type="button" class="btn btn-info">8</button>
+
+              <button type="button" class="btn btn-lg btn-danger" data-bs-toggle="popover" title="Popover title" data-bs-content="And here's some amazing content. It's very engaging. Right?">Click to toggle popover</button>
+
             </div>
 
  <!-- Vertically centered modal -->
@@ -196,7 +199,6 @@
         </div>
         
       
-      
 
      
     <!-- Optional JavaScript; choose one of the two! -->
@@ -209,5 +211,14 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
     -->
+
+
+    <script>
+      var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+  return new bootstrap.Popover(popoverTriggerEl)
+})
+
+    </script>
   </body>
 </html>

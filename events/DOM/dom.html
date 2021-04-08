@@ -98,20 +98,20 @@
 
       document.write(thead.getAttribute("style") + "<br>");
 
-      document.writeln("*_".repeat(30) + "<br>");
+      document.write("*_".repeat(30) + "<br>");
       
       let trRows = document.querySelectorAll("table>tbody>tr");
     //   debugger;
 
-      trRows.forEach(function(item,index){
+      trRows.forEach (function(item,index,list){
 
-      let tdCol=item.cells;
-    //   document.writeln(`${tdCols[0].innerHTML},${tdCols[1].innerHTML},${tdCols[2].innerHTML}<br>}`);
-      document.writeln(`${tdCols[0].innerHTML}`);
+      let tdCols = item.cells;
+      document.writeln(`${tdCols[0].innerHTML},${tdCols[1].innerHTML},${tdCols[2].innerHTML}<br>}`);
+    //   document.writeln(`${tdCols[0].innerHTML}`);
 
       });
       
-      document.writeln("*_".repeat(30) + "<br>");
+      document.write("*_".repeat(30) + "<br>");
 
     </script>
 

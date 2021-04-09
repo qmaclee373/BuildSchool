@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+    <h1>DOM</h1>
+    <div>
+        <p>window</p>
+        <p>document</p>
+        <p>html</p>
+
+    </div>
+
+        <li>Node</li>
+        <li>NodeList</li>
+        <li>HTMLCollection</li>
+
+<script>
+    let div = document.createElement("div");
+    let p1 = document.createElement("p"); p1.innerText = "window";
+    let p2 = document.createElement("p"); p2.innerText = "document";
+    let p3 = document.createElement("p"); p3.innerText = "html";
+
+    div.appendChild(p1);
+    div.appendChild(p2);
+    div.appendChild(p3);
+    document.body.append(div);
+
+    
+    let lis = ["window","document","html"];
+    let ul = genUI(lis);
+    document.body.appendChild(ul);
+
+    function genUI(liArray){
+        let ul = document.createElement("ul");
+
+    
+    liArray.forEach((item,index) =>{
+        let li = document.createElement("li");
+        li.innerHTML = item;
+        ul.appendChild(li);
+    });
+
+    return ul;
+}
+
+</script>
+</body>
+</html>

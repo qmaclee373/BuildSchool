@@ -7,5 +7,19 @@ var jsonText = JSON.stringify(person);
 console.log(typeof jsonText);
 var p = JSON.parse(jsonText);
 
-// console.log(person);
-// console.log(typeof p); 
+function Person(name, age, height, weight){
+this.name = name,
+this.age = age, 
+this.height = height,
+this.weight = weight,
+this.bmi = function(){
+    return weight/((height/100)**2);
+
+}
+function displayBMI(){
+let lady = new Person("Mary",26,168,52);
+MSGesture.innerText = "BMI ="+ lady.bmi();
+
+}
+
+}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+        <title>Byname,tag</title>
+        <style type="text/css">
+        
+        .btn {
+            background-color:cyan;
+            height: 30px;
+            width: 100px;
+        }
+
+        </style>
+        </head>
+
+<body>
+    <div class="div">
+    <button class="btn" id = "btn1">btn1</button>
+    <button class="btn" id = "btn2">btn2</button>
+    <button class="btn" id = "btn3">btn3</button>
+    </div>
+    
+    <script>
+        let btn1 = document.getElementById("btn1");
+        let btn2 = document.getElementById("btn2");
+        let btn3 = document.getElementById("btn3");
+
+        btn2.onclick = function(){
+        sayHello('Richard');
+        }
+
+        btn3.addEventListener('click', function(){
+        Three();
+        });
+        
+       
+
+        function One(){
+            alert('One');
+        }
+        
+        function Two(){
+            alert('Two');
+        }
+        
+        function Three(){
+            alert('Three');
+        }
+        
+        function sayHello(person){
+            alert(`${person} 說你好`);
+        }
+        
+
+    </script>
+
+
+
+</body>
+</html>

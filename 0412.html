@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>定時器</h1>
+    <button onclick="Start()">開始</button>
+    <button onclick="Stop()">停止</button>
+
+    <script>
+    const colors = ["green", "blue", "white", "red", "yellow", "orange"];
+   // const poem = ["春花秋⽉何時了", "往事知多少", "⼩樓昨夜⼜東風", "故國不堪回⾸⽉明中"]; 
+
+    function getRandom(min, max) {
+    return Math.floor(Math.random() * (max - min) + min);
+    }
+
+    let intevalId;
+    function Start(){
+        intervalId = setInterval(changeColor, 1000);
+    }
+
+    function Stop(){
+        clearInterval(intervalId); 
+    }
+
+    let body = document.querySelector("body");
+    function changeColor(){
+    body.style.backgroundColor=colors[getRandom(0, 6)];
+    console.log(Math.random());
+    }
+    </script>
+   </body>
+</html>

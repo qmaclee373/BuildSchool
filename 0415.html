@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>寶可夢圖鑑列表</h1>
+    <button id='addone' onclick="addPokemon()">Click +1</button>
+    <button id='removeone' onclick="removePokemon()">Clear -1</button>
+    <button id='loadall' onclick="loadAllPokemon()">Load All</button>
+    <button id='reset' onclick="resetPokemon()">Reset</button>
+    <button id='timer'>Timer</button>
+    <button id='stop'>Stop Timer</button>
+
+    <div id='container'></div>
+
+    <script>
+let container = document.getElementById("container");
+let index = 1;
+let intervalID = -1;
+window.onload = appendPokemon();
+    function appendPokemon(){
+        let img = document.createElement("img");
+        img.setAttribute("src","https://assets.pokemon.com/assets/cms2/img/pokedex/detail/001.png")
+        
+        img.addEventListener("click",removeImg);
+        
+        container.appendChild(img);
+        index++;
+    }
+
+    function removeImg(){
+
+    }
+
+
+    function addPokemon(){
+        let img = document.createElement("img");
+        let no = index.toString().padStar(3,"0");
+        img.setAttribute("src","https://assets.pokemon.com/assets/cms2/img/pokedex/detail/${index}.png")
+        
+        img.addEventListener("click",removeImg);
+        
+        container.appendChild(img);
+        index++;
+
+    }
+
+    function removePokemon(){
+        let len = container.childNodes.length;
+        if (len > 0){
+            container.removeChild(container.childNodes[len-1]);
+            index > 1 ? index--:index;
+        }
+    }
+
+    function loadAllPokemon(){
+        for(let i=1;i < 899;i++){
+            let img = document.createElement("img");
+            let no = index.toString().padStar(3,"0");
+            img.setAttribute("src","https://assets.pokemon.com/assets/cms2/img/pokedex/detail/${index}.png")
+        
+            img.addEventListener("click",removeImg);
+        
+            container.appendChild(img);
+            index++;
+
+            }
+
+
+    }
+
+
+
+
+
+    </script>
+</body>
+</html>

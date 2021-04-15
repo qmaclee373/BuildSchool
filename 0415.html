@@ -8,6 +8,30 @@
 </head>
 
 <body>
+
+ <!--    <h1>setInterval() - ⽇⼟</h1>
+ <button onclick="Start()">Start</button>
+ <button onclick="Stop()">Stop</button>
+ <script>
+ const colors = ["green", "blue", "red", "orange"];
+ const poem = ["春花秋⽉何時了", "往事知多少", "⼩樓昨夜⼜東風", "故國不堪回⾸⽉明中"];
+ let body = document.querySelector("body");
+ let intervalId;
+ function Start(){
+ intervalId = setInterval(changeColor, 1000);
+ }
+ function Stop(){
+ clearInterval(intervalId);
+ }
+ function changeColor(){
+ body.style.backgroundColor=colors[getRandom(0, 4)];
+ console.log(Math.random());
+ }
+ function getRandom(min, max) {
+ return Math.floor(Math.random() * (max - min) + min);
+ }
+ </script>  -->
+
     <h1>寶可夢圖鑑列表</h1>
     <button id='addone' onclick="addPokemon()">Click +1</button>
     <button id='removeone' onclick="removePokemon()">Clear -1</button>
@@ -22,7 +46,11 @@
 let container = document.getElementById("container");
 let index = 1;
 let intervalID = -1;
-window.onload = appendPokemon();
+
+// window.onload = appendPokemon();
+window.onload = function(){
+    setTimeout(appendPokemon,3000);
+}
     function appendPokemon(){
         let img = document.createElement("img");
         img.setAttribute("src","https://assets.pokemon.com/assets/cms2/img/pokedex/detail/001.png")
@@ -41,9 +69,9 @@ window.onload = appendPokemon();
     function addPokemon(){
         let img = document.createElement("img");
         let no = index.toString().padStar(3,"0");
-        img.setAttribute("src","https://assets.pokemon.com/assets/cms2/img/pokedex/detail/${index}.png")
+        img.setAttribute("src",`https://assets.pokemon.com/assets/cms2/img/pokedex/detail/${index}.png`)
         
-        img.addEventListener("click",removeImg);
+        img.addEventListener("click",addImg);
         
         container.appendChild(img);
         index++;
@@ -62,7 +90,7 @@ window.onload = appendPokemon();
         for(let i=1;i < 899;i++){
             let img = document.createElement("img");
             let no = index.toString().padStar(3,"0");
-            img.setAttribute("src","https://assets.pokemon.com/assets/cms2/img/pokedex/detail/${index}.png")
+            img.setAttribute("src",`https://assets.pokemon.com/assets/cms2/img/pokedex/detail/${index}.png`);
         
             img.addEventListener("click",removeImg);
         
@@ -70,12 +98,23 @@ window.onload = appendPokemon();
             index++;
 
             }
+        }
+
+    let intervalId;
+    function Start(){
+    intervalId = setInterval(changeColor, 3000);
+    } 
+
+
+    function Timer(){
 
 
     }
 
+    function stop(){
+        clearInterval(intervalId);
 
-
+    }
 
 
     </script>

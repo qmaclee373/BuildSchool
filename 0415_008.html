@@ -11,9 +11,9 @@
     <h1>用 XMLHttpRequest 請求 GitHub JSON 資料</h1>
 
     <button id='button1'>Request JSON1</button>
-    <button id='button2'>Request JSON2</button>
+   <!--  <button id='button2'>Request JSON2</button>
     <button id='button3'>Request JSON3</button>
-    <button id='button4'>Request JSON4</button>
+    <button id='button4'>Request JSON4</button> -->
     <button id='btnClear'>Clear</button>
     <div id='msg'></div>
 
@@ -27,19 +27,15 @@
         });
 
         let btn1 = $g('#button1').addEventListener('click', requestJSON1);
-        let btn2 = $g('#button2').addEventListener('click', requestJSON2);
+     /*    let btn2 = $g('#button2').addEventListener('click', requestJSON2);
         let btn3 = $g('#button3').addEventListener('click', requestJSON3);
-        let btn4 = $g('#button4').addEventListener('click', requestJSON4);
+        let btn4 = $g('#button4').addEventListener('click', requestJSON4); */
         $g('#btnClear').addEventListener('click', () => { msg.innerText = ''; })
 
 
-        const url = 'https://raw.githubusercontent.com/apprunner/FileStorage/master/iPadAir2020_Data.json';
+        const url = '';
         // // const url = 'http://127.0.0.1:5503/XMLHttpRequest/iPad_DataFixed.json';
-
-
-
-
-
+        
         let xhr = new XMLHttpRequest();
 
         //Ex1
@@ -53,8 +49,30 @@
 
         }
 
+        function requestJSON(){
 
+        let xhr = new XMLHttpRequest();
+        xhr.onload = function(){
+            if (xhr.readyState==4 && xhr.status ==200){
+                msg.textContent = this.responseText;
 
+            }else{
+                msg.textContent ='發⽣錯誤，HTTP response代碼：' +
+            xhr.status; 
+            }
+            if (xhr.readyState==4 && xhr.statusText =="OK"){
+                msg.textContent = this.responseText;
+            }else{
+            msg.textContent ='發⽣錯誤，HTTP response代碼：' +
+            xhr.status;
+            } 
+            }
+            xhr.open("GET", url);
+            xhr.send(); 
+
+        }       
+
+    
         //Ex2
         function requestJSON2() {
 
@@ -81,13 +99,11 @@
         //Ex4
         function requestJSON4() {
 
-            xhr.onreadystatechange = ()=>{ msg.innerText=xhr.responseText;}
+            xhr.onreadystatechange = ()=>{ msg.innerText=this.responseText;}
             xhr.open('GET', url);
             xhr.send();
 
         }
-
-
     </script>
 </body>
 

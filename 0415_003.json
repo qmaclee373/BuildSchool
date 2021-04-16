@@ -1,7 +1,7 @@
 {
 "firstname":"Kevin",
 "height":180,
-"email":"kevin@gmail.com"
+"email":"kevin@gmail.com",
 "city":{
     "通訊地址":"台北",
     "戶籍地址":"桃園"

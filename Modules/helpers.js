@@ -28,4 +28,18 @@ function getRandom(min, max) {
     return Math.floor(Math.random() * max + min);
 }
 
-export { $g , genUI , getRandom };
+function $c(element, text){
+
+    let el = document.createElement(element);
+
+    if (text !== null && text !== undefined && text.length > 0){
+        
+        el.innerText = text;
+
+    }
+    
+    return el;
+
+}
+
+export { $g , genUI , getRandom, $c };

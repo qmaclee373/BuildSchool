@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table,
+        th,
+        td {
+            table-layout: fixed;
+            width: 100%;
+            border-collapse: collapse;
+            border: 3px solid purple;
+        }
+
+        tbody tr:nth-child(odd) {
+            background-color: lightblue;
+        }
+
+        tbody tr:nth-child(even) {
+            background-color: aqua;
+        }
+
+        thead th:nth-child(1) {
+            width: 10%;
+            cursor: pointer;
+        }
+
+        thead th:nth-child(2) {
+            width: 10%;
+            cursor: pointer;
+        }
+
+        thead th:nth-child(3) {
+            width: 10%;
+            cursor: pointer;
+        }
+
+        thead th:nth-child(4) {
+            width: 60%;
+        }
+
+        thead th:nth-child(5) {
+            width: 10%;
+        }
+
+        img {
+            /* width: auto; */
+            height: 10%;
+        }
+    </style>
+</head>
+
+<body>
+<h1></h1>
+<div id='msg'></div>
+
+
+
+<script>
+let table = document.createElement('table');
+let thead = document.createElement('thead');
+let tbody = document.createElement('tbody');
+table.appendChild(thead);
+table.appendChild(tbody);
+
+document.body.appendChild(table);
+
+/* let th = document.createElement('th');
+th.innerText = 'SKU';
+thead.appendChild(th); */
+
+function createElement(element, text){
+    let el = document.createElement(element);
+    el.innerText = text;
+    return el;
+}
+
+let tr1 = document.createElement('tr');
+tr1.appendChild(createElement('th','Sku'));
+tr1.appendChild(createElement('th','Price'));
+tr1.appendChild(createElement('th','Storage'));
+tr1.appendChild(createElement('th','Description'));
+thead.appendChild(tr1);
+
+let tr2 = document.createElement('tr');
+tr2.appendChild(createElement('td','MW762'));
+tr2.appendChild(createElement('th','10900'));
+tr2.appendChild(createElement('th','32GB'));
+tr2.appendChild(createElement('th','10.2 吋 iPad Wi-Fi 機型 32GB - 金色'));
+tbody.appendChild(tr2);
+
+let tr3 = document.createElement('tr');
+tr3.appendChild(createElement('td','MW792'));
+tr3.appendChild(createElement('th','13900'));
+tr3.appendChild(createElement('th','128GB'));
+tr3.appendChild(createElement('th','10.2 吋 iPad Wi-Fi 機型 128GB - 金色'));
+tbody.appendChild(tr3);
+
+
+</script>
+</body>
+
+</html>

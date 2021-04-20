@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>JS Bin</title>
+	
+	<!-- jQuery v1.9.1 -->
+	<script type="text/javascript" src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+	
+	<!-- Moment.js v2.20.0 -->
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.20.0/moment.min.js"></script>
+	
+	<!-- FullCalendar v3.10.2 -->
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.2/fullcalendar.min.css" rel="stylesheet"  />
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.2/fullcalendar.print.min.css" rel="stylesheet" media="print">
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.2/fullcalendar.min.js"></script>
+    
+	<style>
+   .example {
+    width:800px;
+    height: 600px;
+    } 
+    </style>
+</head>
+
+<body>
+  <div id="example" class="example"></div>
+
+  <script>
+  	$( "#example" ).fullCalendar({
+  		
+  		header: { 
+  			left: "prev,next today", 
+  			center: "title", 
+  			right: "month,basicWeek,basicDay" 
+  		},
+  		defaultDate: "2021-04-20",
+  		weekends: true,  // 顯示六日
+  		editable: true,  // 啟動拖曳
+
+  		events: [ 
+  			{ // 事件
+  				title: "上課",
+  				start: "2021-04-01"
+  			},
+
+  			{ // 事件(包含開始)
+  				title: "CSS",
+  				start: "2021-04-20T12:00:00"
+  			},
+
+  			{ // 事件(包含跨日開始、結束)
+  				title: "JavaScript",
+  				start: "2021-04-07",
+  				end: "2021-04-10"
+  			},
+
+  			{ // 事件(包含開始、結束)
+  				title: "C sharp",
+  				start: "2021-04-13T10:30:00",
+  				end: "2021-04-13T12:30:00"
+  			},
+  		]
+  	});
+
+  </script>
+
+</body>
+
+</html>

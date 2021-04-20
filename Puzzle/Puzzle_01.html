@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<div id="selectpanel"></div>
+<div id="orginalimg"></div>
+<div id="mathpanel"></div>
+</body>
+<script>
+    function Puzzle(imgWidth,imgHeight,cuttingoffX,cuttingoffY,img){
+  var selectPanel=document.getElementById("selectpanel");//拼圖面板
+  var mathPanel=document.getElementById("mathpanel");//拼圖匹配面板
+  var orginalImg=document.getElementById("orginalimg");//參照圖面板
+  selectPanel.style.cssText='width: auto;height: auto;border: 2px solid black;overflow: hidden;float: left;margin: 10px;';
+  mathPanel.style.cssText='width: auto;height: auto;border: 2px solid black;overflow: hidden;float: right;margin: 10px;';
+  var amount=(imgWidth/cuttingoffX)*(imgHeight/cuttingoffY);//根據自定義每塊拼圖的寬高，計算拼圖的總數量
+  var jsonPosition=[];
+  for(var i=0;i<amount;i++){//一個數組模擬成一個二維矩陣，用json來存這個矩陣，並且每個位置給它一個匹配值M
+    jsonPosition[i]={X:i%(imgWidth/cuttingoffX),Y:parseInt(i/(imgHeight/cuttingoffY)),M:i};
+  }
+  for(var c=0;c<amount;c++){//隨機生成拼圖位置
+    var divImg=document.createElement("div");
+    divImg.style.width=cuttingoffX+"px";
+    divImg.style.height=cuttingoffY+"px";
+    divImg.style.backgroundImage="url(img/"+img+")";
+    divImg.style.backgroundRepeat="no-repeat";
+    divImg.style.border="1px dashed gray";
+    divImg.style.float="left";
+    divImg.style.cursor="pointer";
+    if(c%(imgWidth/cuttingoffX)==0&&c!=0)
+    divImg.style.clear="left";
+    var rendomPositon=jsonPosition.splice(Math.floor(Math.random()*jsonPosition.length),1)[0];
+    divImg.style.backgroundPosition=rendomPositon['X']*(-cuttingoffX)+'px'+' '+rendomPositon['Y']*(-cuttingoffY)+'px';
+    divImg.draggable="true";
+    divImg.maths=rendomPositon["M"];
+    selectPanel.appendChild(divImg);
+  }
+  for(var c=0;c<amount;c++){//生成拼圖匹配面板
+    var divEmpty=document.createElement("div");
+    divEmpty.style.width=cuttingoffX+"px";
+    divEmpty.style.height=cuttingoffY+"px";
+    divEmpty.style.border="1px solid gray";
+    divEmpty.style.float="left";
+    if(c%(imgWidth/cuttingoffX)==0&&c!=0)
+    divEmpty.style.clear="left";
+    divEmpty.maths=c;
+    mathPanel.appendChild(divEmpty);
+  }
+  var orginalImgWidth=document.body.clientWidth-(selectPanel.offsetWidth+selectPanel.offsetLeft+10)*2;
+  orginalImg.style.cssText="width: "+orginalImgWidth+"px;height:"+orginalImgWidth+"px;position:absolute;left:50%;margin-left:"+(-orginalImgWidth/2)+"px;top:10px;";
+  orginalImg.style.background="url(img/"+img+") no-repeat 0 0";
+  orginalImg.style.backgroundSize=orginalImgWidth+"px "+orginalImgWidth+"px";
+  var divImgs=selectPanel.getElementsByTagName("div");
+  var divEmptys=mathPanel.getElementsByTagName("div");
+  for(var e=0;e<divImgs.length;e++){
+    divImgs[e].ondragstart=function(event){//鼠標開始拖拽拼圖，並且拿到它的匹配值maths
+      var event=event||window.event;
+      event.dataTransfer.setData("math",this.maths);
+    }
+    divImgs[e].ondrag=function(){
+    }
+    divImgs[e].ondragend=function(){
+    }
+    divEmptys[e].ondragenter=function(){
+      this.style.backgroundColor="red";
+    }
+    divEmptys[e].ondragover=function(event){//取消在拼圖匹配面板的默認事件，否則ondrop無效
+      return false;
+    }
+    divEmptys[e].ondragleave=function(){
+      this.style.backgroundColor="transparent";
+    }
+    divEmptys[e].ondrop=function(event){//拖拽的拼圖在匹配面板放下時執行函數
+      var event=event||window.event;
+      this.style.backgroundColor="transparent";
+      if(event.dataTransfer.getData("math")==this.maths){//判斷拼圖傳過來的maths匹配值是否和匹配面板的maths一樣，如果是則匹配成功
+        for(var i=0;i<divImgs.length;i++){
+          if(divImgs[i].maths==this.maths){
+            this.style.backgroundImage=divImgs[i].style.backgroundImage;
+            this.style.backgroundRepeat=divImgs[i].style.backgroundRepeat;
+            this.style.backgroundPosition=divImgs[i].style.backgroundPosition;
+            divImgs[i].setAttribute("draggable","false");
+            divImgs[i].style.background="none";
+          }
+        }
+      }
+    }
+  }
+}
+//瀏覽器窗口發生變化時的圖片處理
+window.onresize=function(){
+  var selectPanel=document.getElementById("selectpanel");
+  var orginalImg=document.getElementById("orginalimg");
+  var orginalImgWidth=document.body.clientWidth-(selectPanel.offsetWidth+selectPanel.offsetLeft+10)*2;
+  orginalImg.style.width=orginalImg.style.height=orginalImgWidth+"px";
+  orginalImg.style.marginLeft=-orginalImgWidth/2+"px";
+  orginalImg.style.backgroundSize=orginalImgWidth+"px "+orginalImgWidth+"px";
+}
+</script>
+
+<script>
+    window.onload=function(){
+  //圖的原始寬度(原圖寬)，圖的原始高度(原圖高)，自定每塊拼圖的寬度(能被原圖寬整除)，自定每塊拼圖的高度(能被原圖高整除)，圖片名(需放在img下)
+  Puzzle(500,500,125,125,"cat.jpg");
+}
+</script>
+
+
+</html>

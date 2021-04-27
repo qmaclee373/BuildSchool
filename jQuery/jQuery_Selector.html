@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button>js .innerHTML</button>
+    <button>jQuery .html()</button>
+    <div id="Msg"></div>
+    <div id="jqMsg"></div> 
+    
+<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+
+<script type="module">
+    import { $g } from "../Modules/helpers.js"
+    document.getElementById("Msg").addEventListener("click", function(){
+    document.getElementById("Msg").innerHTML ="<h1>Pure JavaScript</h1>";
+    });
+
+    $g("button:first-child").addEventListener("click", function(){
+    $g("#Msg").innerHTML ="<h1>JavaScript Module</h1>";
+    });
+
+    $("button").last().click(function(){
+    $("#jqMsg").html("<h1>This is jQuery</h1>");
+    });
+   </script>
+</body>
+</html>

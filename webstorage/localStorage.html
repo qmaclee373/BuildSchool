@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id='container'></div>
+    <script>
+        var storage = window.sessionStorage;
+        sessionStorage.setItem('name','Kevin');
+        sessionStorage.setItem('email','Kevin@gmail.com');
+
+        let name = sessionStorage.getItem('name');
+        let email = sessionStorage.getItem('email');
+
+        document.getElementById("container").innerText = name + '---'+ email;
+        
+        sessionStorage.removeItem('email');
+        sessionStorage.clear();
+
+    </script>
+    
+</body>
+</html>

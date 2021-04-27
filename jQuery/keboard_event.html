@@ -7,21 +7,18 @@
     <title>Document</title>
 </head>
 <body>
-    <div id="app">
-        {{ message }}
-      </div>
-    
+<input type="text" value="輸入⽂字...">
+<div></div>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 
 <script>
-      var app = new Vue({
-        el: '#app',
-        data: {
-          message: 'Hello Vue!'
-        }
-      })
+ $("input").keyup(function(){
+let value=$(this).vla();
+$("div").text(value);
 
+ })
 </script>
-</body> 
 
+    
+</body>
 </html>

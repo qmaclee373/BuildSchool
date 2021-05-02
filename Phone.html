@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<!-- saved from url=(0051)https://bearseeyou.github.io/hw_js_Apple/apple.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Required meta tags -->
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="./Phone_files/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <title>Hello, world!</title>
+    <style>
+        .container {
+            max-width: 1200px;
+        }
+
+        h2 {
+            margin-left: -10px;
+            font-weight: bolder;
+        }
+
+        h3 {
+            font-size: 18px;
+            font-weight: bolder;
+        }
+
+        hr {
+            margin-left: -50px;
+        }
+
+        .row {
+            border-color: rgb(194, 194, 194);
+        }
+
+        input {
+            display: none;
+        }
+
+        input:checked+label {
+            border: 2px solid #0d6efd;
+            box-shadow: 0 0 0 2px rgb(128, 180, 248);
+            color: rgb(49, 49, 49);
+            background-color: transparent;
+        }
+
+        input:not(:checked)+label:hover {
+            border-color: rgb(139, 139, 139);
+        }
+
+        .btn-outline-primary {
+            border-color: rgb(194, 194, 194);
+            box-shadow: 0 0 0 2px rgba(128, 180, 248, 0);
+            color: rgb(49, 49, 49);
+            transition: 0s;
+        }
+
+        .btn-outline-primary:active {
+            color: #fff;
+            background-color: transparent;
+            border-color: #0d6efd;
+        }
+
+        .btn-outline-primary:hover {
+            background-color: transparent;
+            color: rgb(49, 49, 49);
+        }
+
+        .btn-outline-primary .desc {
+            display: block;
+            font-size: 12px;
+        }
+
+        .rounded-circle {
+            display: block;
+            width: 30px;
+            height: 30px;
+        }
+
+        /* .iwhite.rounded-circle {
+            background-color: rgb(243, 237, 237);
+        }
+
+        .iblack.rounded-circle {
+            background-color: rgb(32, 32, 32);
+        }
+
+        .igreen.rounded-circle {
+            background-color: rgb(182, 241, 214);
+        }
+
+        .iyellow.rounded-circle {
+            background-color: rgb(253, 245, 136);
+        }
+
+        .ipurple.rounded-circle {
+            background-color: rgb(231, 197, 248);
+        }
+
+        .ired.rounded-circle {
+            background-color: rgb(223, 31, 57);
+        } */
+
+        .capacity {
+            font-size: 28px;
+            font-weight: bolder;
+        }
+
+        .gb {
+            font-size: 20px;
+            font-weight: bolder;
+        }
+
+        .internet {
+            font-size: 20px;
+            font-weight: bolder;
+        }
+
+        .total-price {
+            font-size: 35px;
+            font-weight: bolder;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="text-center mb-3">
+        <button id="iPhone" class="btn btn-dark">iPhone</button>
+        <button id="iPad" class="btn btn-dark">iPad</button>
+        <button id="Mac" class="btn btn-dark">Mac</button>
+    </div>
+    <div class="container">
+        <div class="row ">
+            <div class="col-12 col-md-7 text-center">
+                <!-- <img class="" src="./apple_img/iphone-black.png" alt=""> -->
+            <img src="./Phone_files/iphone11-select-2019-family.png"></div>
+            <!-- <section class="col-12 col-md-5 pt-5">
+                <h2>購買iPhone 11</h2>
+                <form class="row border-bottom pt-4 pb-3">
+                    <h3 class="ps-0 mb-3">選擇外觀。</h3>
+                    <input type="radio" name="color" id="white-iPhone11">
+                    <label class="choose-color btn btn-outline-primary col-5 py-4 me-3 mb-3" for="white-iPhone11">
+                        <span class="iwhite rounded-circle  bg-gradient mx-auto mb-1"></span>
+                        <span class="desc">白色</span>
+                    </label>
+
+                    <input type="radio" name="color" id="black-iPhone11">
+                    <label class="choose-color btn btn-outline-primary col-5 py-4 me-3 mb-3" for="black-iPhone11">
+                        <span class="iblack rounded-circle  bg-gradient mx-auto mb-1"></span>
+                        <span class="desc">黑色</span>
+                    </label>
+                    <input type="radio" name="color" id="green-iPhone11">
+                    <label class="choose-color btn btn-outline-primary col-5 py-4 me-3 mb-3" for="green-iPhone11">
+                        <span class="igreen rounded-circle  bg-gradient mx-auto mb-1"></span>
+                        <span class="desc">綠色</span>
+                    </label>
+                    <input type="radio" name="color" id="yellow-iPhone11">
+                    <label class="choose-color btn btn-outline-primary col-5 py-4 me-3 mb-3" for="yellow-iPhone11">
+                        <span class="iyellow rounded-circle  bg-gradient mx-auto mb-1"></span>
+                        <span class="desc">黃色</span>
+                    </label>
+                    <input type="radio" name="color" id="purple-iPhone11">
+                    <label class="choose-color btn btn-outline-primary col-5 py-4 me-3 mb-3" for="purple-iPhone11">
+                        <span class="ipurple rounded-circle  bg-gradient mx-auto mb-1"></span>
+                        <span class="desc">紫色</span>
+                    </label>
+                    <input type="radio" name="color" id="red-iPhone11">
+                    <label class="choose-color btn btn-outline-primary col-5 py-4 me-3 mb-3" for="red-iPhone11">
+                        <span class="ired rounded-circle  bg-gradient mx-auto mb-1"></span>
+                        <span class="desc">(PRODUCT)RED</span>
+                    </label>
+                </form>
+                <form class="row pt-4 pb-3 border-bottom">
+                    <h3 class="ps-0 mb-3">選擇儲存容量。</h3>
+                    <input type="radio" name="capacity" id="64gb-iPhone11">
+                    <label class="choose-capacity btn btn-outline-primary col-5 py-4 me-3 mb-3" for="64gb-iPhone11">
+                        <span class="capacity">64</span>
+                        <span class="gb">GB**</span>
+                        <span class="desc">NT$19,900</span>
+                    </label>
+                    <input type="radio" name="capacity" id="128gb-iPhone11">
+                    <label class="choose-capacity btn btn-outline-primary col-5 py-4 me-3 mb-3" for="128gb-iPhone11">
+                        <span class="capacity">128</span>
+                        <span class="gb">GB**</span>
+                        <span class="desc">NT$21,500</span>
+                    </label>
+                    <input type="radio" name="capacity" id="256gb-iPhone11">
+                    <label class="choose-capacity btn btn-outline-primary col-5 py-4 me-3 mb-3" for="256gb-iPhone11">
+                        <span class="capacity">256</span>
+                        <span class="gb">GB**</span>
+                        <span class="desc">NT$25,500</span>
+                    </label>
+                </form>
+                <p class="total-price text-center mt-5">NT$19,900</p>
+
+            </section> -->
+            <div class="col-12 col-md-5 pt-5"><h2>購買iPhone11</h2><form class="row border-bottom pt-4 pb-3"><h3 class="ps-0 mb-3">外觀</h3><input type="radio" name="color" id="white-iPhone11"><label for="white-iPhone11" class="choose-color btn btn-outline-primary col-5 py-4 me-3 mb-3"><span class="rounded-circle bg-gradient mx-auto mb-1" style="background-color: rgb(243, 237, 237);"></span><span class="desc">白色</span></label><input type="radio" name="color" id="black-iPhone11"><label for="black-iPhone11" class="choose-color btn btn-outline-primary col-5 py-4 me-3 mb-3"><span class="rounded-circle bg-gradient mx-auto mb-1" style="background-color: rgb(32, 32, 32);"></span><span class="desc">黑色</span></label><input type="radio" name="color" id="green-iPhone11"><label for="green-iPhone11" class="choose-color btn btn-outline-primary col-5 py-4 me-3 mb-3"><span class="rounded-circle bg-gradient mx-auto mb-1" style="background-color: rgb(182, 241, 214);"></span><span class="desc">綠色</span></label><input type="radio" name="color" id="yellow-iPhone11"><label for="yellow-iPhone11" class="choose-color btn btn-outline-primary col-5 py-4 me-3 mb-3"><span class="rounded-circle bg-gradient mx-auto mb-1" style="background-color: rgb(253, 245, 136);"></span><span class="desc">黃色</span></label><input type="radio" name="color" id="purple-iPhone11"><label for="purple-iPhone11" class="choose-color btn btn-outline-primary col-5 py-4 me-3 mb-3"><span class="rounded-circle bg-gradient mx-auto mb-1" style="background-color: rgb(231, 197, 248);"></span><span class="desc">紫色</span></label><input type="radio" name="color" id="red-iPhone11"><label for="red-iPhone11" class="choose-color btn btn-outline-primary col-5 py-4 me-3 mb-3"><span class="rounded-circle bg-gradient mx-auto mb-1" style="background-color: rgb(223, 31, 57);"></span><span class="desc">紅色</span></label></form><form class="row border-bottom pt-4 pb-3"><h3 class="ps-0 mb-3">儲存裝置</h3><input type="radio" name="capacity" id="64-iPhone11"><label for="64-iPhone11" class="choose-color btn btn-outline-primary col-5 py-4 me-3 mb-3"><span class="capacity">64</span><span class="gb">GB**</span><span class="desc">NT$19,900</span></label><input type="radio" name="capacity" id="128-iPhone11"><label for="128-iPhone11" class="choose-color btn btn-outline-primary col-5 py-4 me-3 mb-3"><span class="capacity">128</span><span class="gb">GB**</span><span class="desc">NT$21,500</span></label><input type="radio" name="capacity" id="256-iPhone11"><label for="256-iPhone11" class="choose-color btn btn-outline-primary col-5 py-4 me-3 mb-3"><span class="capacity">256</span><span class="gb">GB**</span><span class="desc">NT$25,000</span></label></form><p class="total-price text-center mt-5"></p></div>
+        </div>
+    </div>
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="./Phone_files/bootstrap.bundle.min.js.下載" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous">
+        </script>
+    <script>
+        let product =
+        {
+            iPhone11: {
+                title: '購買iPhone11',
+                default_img: './apple_img/iphone11-select-2019-family.png',
+                color_title: '外觀',
+                color: [
+                    { en_color: 'white', ch_color: '白色', color_code: 'rgb(243, 237, 237)', img_url: "./apple_img/iphone-white.png" },
+                    { en_color: 'black', ch_color: '黑色', color_code: ' rgb(32, 32, 32)', img_url: "./apple_img/iphone-black.png" },
+                    { en_color: 'green', ch_color: '綠色', color_code: 'rgb(182, 241, 214)', img_url: "./apple_img/iphone-green.png" },
+                    { en_color: 'yellow', ch_color: '黃色', color_code: 'rgb(253, 245, 136)', img_url: "./apple_img/iphone-yellow.png" },
+                    { en_color: 'purple', ch_color: '紫色', color_code: 'rgb(231, 197, 248)', img_url: "./apple_img/iphone-purple.png" },
+                    { en_color: 'red', ch_color: '紅色', color_code: 'rgb(223, 31, 57)', img_url: "./apple_img/iphone-red.png" },
+                ],
+                capacity_title: '儲存裝置',
+                capacity: [
+                    { gb: 64, cost: 'NT$19,900' },
+                    { gb: 128, cost: 'NT$21,500' },
+                    { gb: 256, cost: 'NT$25,000' },
+                ]
+            },
+
+
+            iPad: {
+                title: '購買iPad',
+                default_img: './apple_img/ipad-hero-unselected-201909_GEO_TW.png',
+                color_title: '外觀',
+                color: [
+                    { en_color: 'space', ch_color: '太空灰色', color_code: '#9ba2a5', img_url: "./apple_img/ipad-space.png" },
+                    { en_color: 'silver', ch_color: '銀色', color_code: '#dfdfdf', img_url: "./apple_img/ipad-silver.png" },
+                    { en_color: 'gold', ch_color: '金色', color_code: '#efd8c4', img_url: "./apple_img/ipad-gold.png" },
+                ],
+                capacity_title: '儲存裝置',
+                capacity: [
+                    { gb: 32, cost: 'NT$10,500' },
+                    { gb: 128, cost: 'NT$13,500' },
+                ],
+                connect_title: '連線能力',
+                connect: [
+                    { internet: 'Wi-Fi', cost: 'NT$10,500' },
+                    { internet: 'Wi-Fi + 行動網路', cost: 'NT$14,800' },
+                ],
+                style_title: '讓你的裝置更具個人風格。',
+                person_style: [
+                    { style: '加上刻', cost: 'NT$10,500' },
+                    { style: '不加刻 + 行動網路', cost: 'NT$14,800' },
+                ]
+            },
+
+            Mac: {
+                title: '購買Mac',
+                default_img: './apple_img/mbp13touch-space-gallery1-201907-w500.png',
+                color_title: '外觀',
+                color: [
+                    { en_color: 'space', ch_color: '太空灰色', color_code: '#9ba2a5', img_url: "./apple_img/mbp13touch-space-w500.png" },
+                    { en_color: 'silver', ch_color: '銀色', color_code: '#dfdfdf', img_url: "./apple_img/mbp13touch-silver-w500.png" },
+                ],
+                capacity_title: '儲存裝置',
+                capacity: [
+                    { gb: 256, cost: 'NT$39,900' },
+                    { gb: 512, cost: 'NT$45,900' },
+                ],
+            }
+
+        }
+
+        //圖片區域
+        let imgArea = document.querySelector('.col-12.col-md-7.text-center');
+        let img = document.createElement('img');
+        img.setAttribute('src', './apple_img/iphone11-select-2019-family.png');
+        imgArea.appendChild(img);
+
+        //總價，會等全部選項append完以後，才append到選項區域最底下。
+        let totalPrice = document.createElement('p');
+        totalPrice.classList.add('total-price', 'text-center', 'mt-5');
+
+        //在選項區域裡面新增樣式是row的form標籤的function
+        function setRow(title) {
+            let row = document.createElement('form');
+            row.classList.add('row', 'border-bottom', 'pt-4', 'pb-3');
+            let h3 = document.createElement('h3');
+            h3.classList.add('ps-0', 'mb-3');
+            h3.innerText = title;
+            row.appendChild(h3);
+            return row;
+        }
+
+        //設定好title，清空選項區域和最下方的總價。
+        function setTitle_clearTotalPrice_clearSelectArea(title) {
+            //選項區域
+            let selectArea = document.querySelector('.col-12.col-md-5');
+            selectArea.innerHTML = "";
+            totalPrice.innerText = "";
+            let h2 = document.createElement('h2');
+            h2.innerText = title;
+            selectArea.appendChild(h2);
+            return selectArea;
+        }
+
+        //從 cost 字串取得數值。
+        function getCost(cost) {
+            let str = cost.slice(3, 5);
+            let str2 = cost.slice(6, 9);
+            return parseInt(str + str2);
+        }
+
+        //需要對user的選擇做比對，讓total price顯示user選項裡面最高的價格。
+        function compareCostAndPrint(a, a_text, b, b_text) {
+            if (a >= b) {
+                totalPrice.innerText = `${a_text}`;
+            }
+            else {
+                totalPrice.innerText = `${b_text}`;
+            }
+        }
+
+        //append顏色選項的區域
+        function setColorRow(array, color_row, product_name) {
+            array.forEach((item, index) => {
+                let color_radio = document.createElement('input');
+                color_radio.setAttribute('type', 'radio');
+                color_radio.setAttribute('name', "color");
+                color_radio.setAttribute('id', `${item.en_color}-${product_name}`);
+
+                let color_label = document.createElement('label');
+                color_label.addEventListener(('click'), function () {
+                    img.setAttribute('src', `${item.img_url}`);
+                })
+                color_label.setAttribute('for', `${item.en_color}-${product_name}`);
+                color_label.classList.add('choose-color', 'btn', 'btn-outline-primary', 'col-5', 'py-4', 'me-3', 'mb-3');
+
+                let circle_span = document.createElement('span');
+                circle_span.classList.add('rounded-circle', 'bg-gradient', 'mx-auto', 'mb-1');
+                circle_span.style.backgroundColor = item.color_code;
+
+                let desc_span = document.createElement('span');
+                desc_span.classList.add('desc');
+                desc_span.innerText = item.ch_color;
+
+                color_label.append(circle_span, desc_span);
+                color_row.append(color_radio, color_label);
+            })
+            return color_row;
+
+        }
+
+        function iPhoneAppend() {
+            //設定預設圖片
+            img.setAttribute('src', product.iPhone11.default_img);
+
+            //選項區域
+            let selectArea = setTitle_clearTotalPrice_clearSelectArea(product.iPhone11.title);
+
+            //選項區域 ： 選顏色
+            let color_row = setRow(product.iPhone11.color_title);
+            color_row = setColorRow(product.iPhone11.color, color_row, 'iPhone11');
+            selectArea.appendChild(color_row);
+
+            //選項區域：選儲存容量
+            let capacity_row = setRow(product.iPhone11.capacity_title);
+
+            product.iPhone11.capacity.forEach((item, index) => {
+                let capacity_radio = document.createElement('input');
+                capacity_radio.setAttribute('type', 'radio');
+                capacity_radio.setAttribute('name', "capacity");
+                capacity_radio.setAttribute('id', `${item.gb}-iPhone11`);
+
+                let capacity_label = document.createElement('label');
+                //這邊要記得設定好click事件觸發後，總價會改變。
+                capacity_label.addEventListener(('click'), function () {
+                    totalPrice.innerText = `${item.cost}`;
+                })
+                capacity_label.setAttribute('for', `${item.gb}-iPhone11`);
+                capacity_label.classList.add('choose-color', 'btn', 'btn-outline-primary', 'col-5', 'py-4', 'me-3', 'mb-3');
+
+                let capacity_span = document.createElement('span');
+                capacity_span.classList.add('capacity');
+                capacity_span.innerText = item.gb;
+
+                let gb_span = document.createElement('span');
+                gb_span.classList.add('gb');
+                gb_span.innerText = 'GB**';
+
+                let desc_span = document.createElement('span');
+                desc_span.classList.add('desc');
+                desc_span.innerText = item.cost;
+
+                capacity_label.append(capacity_span, gb_span, desc_span);
+                capacity_row.append(capacity_radio, capacity_label);
+            })
+            selectArea.appendChild(capacity_row);
+            selectArea.appendChild(totalPrice);
+        }
+
+        function iPadAppend() {
+            //設定預設圖片
+            img.setAttribute('src', product.iPad.default_img);
+
+            //設定標題
+            let selectArea = setTitle_clearTotalPrice_clearSelectArea(product.iPad.title);
+
+            //為了total price可以顯示選項裡的最高價格，我會在外面宣告好，就不是在function裡面宣告
+            let capacity_cost = 0;
+            let connect_cost = 0;
+            let capacity_text = "";
+            let connect_text = "";
+
+            //選項區域 ： 選顏色
+            let color_row = setRow(product.iPad.color_title);
+            color_row = setColorRow(product.iPad.color, color_row, 'iPad');
+            selectArea.appendChild(color_row);
+
+            //選項區域：選儲存容量
+            let capacity_row = setRow(product.iPad.capacity_title);
+
+            product.iPad.capacity.forEach((item, index) => {
+                let capacity_radio = document.createElement('input');
+                capacity_radio.setAttribute('type', 'radio');
+                capacity_radio.setAttribute('name', "capacity");
+                capacity_radio.setAttribute('id', `${item.gb}-iPad`);
+
+                let capacity_label = document.createElement('label');
+
+                //這邊要記得設定好click事件觸發後，總價會改變。
+                //並且要比對 user 選項裡面，價格最高的會是total price
+                capacity_label.addEventListener(('click'), function () {
+                    capacity_cost = getCost(item.cost);
+                    capacity_text = item.cost;
+                    //這邊compare你放的引數順序很重要喔
+                    compareCostAndPrint(capacity_cost, capacity_text, connect_cost, connect_text);
+                })
+                capacity_label.setAttribute('for', `${item.gb}-iPad`);
+                capacity_label.classList.add('choose-color', 'btn', 'btn-outline-primary', 'col-5', 'py-4', 'me-3', 'mb-3');
+
+                let capacity_span = document.createElement('span');
+                capacity_span.classList.add('capacity');
+                capacity_span.innerText = item.gb;
+
+                let gb_span = document.createElement('span');
+                gb_span.classList.add('gb');
+                gb_span.innerText = 'GB**';
+
+                let desc_span = document.createElement('span');
+                desc_span.classList.add('desc');
+                desc_span.innerText = item.cost;
+
+                capacity_label.append(capacity_span, gb_span, desc_span);
+                capacity_row.append(capacity_radio, capacity_label);
+            })
+            selectArea.appendChild(capacity_row);
+
+            //選項區域：選wifi連線能力
+            let connect_row = setRow(product.iPad.connect_title);
+
+            product.iPad.connect.forEach((item, index) => {
+                let connect_radio = document.createElement('input');
+                connect_radio.setAttribute('type', 'radio');
+                connect_radio.setAttribute('name', "connect");
+                connect_radio.setAttribute('id', `${item.internet}-iPad`);
+
+                let connect_label = document.createElement('label');
+
+                //這邊要記得設定好click事件觸發後，總價會改變。
+                //並且要比對 user 選項裡面，價格最高的會是total price
+                connect_label.addEventListener(('click'), function () {
+                    connect_cost = getCost(item.cost);
+                    connect_text = item.cost;
+                    //這邊compare你放的引數順序很重要喔
+                    compareCostAndPrint(connect_cost, connect_text, capacity_cost, capacity_text);
+                })
+
+                connect_label.setAttribute('for', `${item.internet}-iPad`);
+                connect_label.classList.add('choose-color', 'btn', 'btn-outline-primary', 'col-5', 'py-4', 'me-3', 'mb-3');
+
+                let connect_span = document.createElement('span');
+                connect_span.classList.add('internet');
+                connect_span.innerText = item.internet;
+
+                // let internet_span = document.createElement('span');
+                // internet_span.classList.add('internet');
+                // internet_span.innerText = 'internet**';
+
+                let desc_span = document.createElement('span');
+                desc_span.classList.add('desc');
+                desc_span.innerText = item.cost;
+
+                connect_label.append(connect_span, desc_span);// internet_span, 
+                connect_row.append(connect_radio, connect_label);
+            })
+            selectArea.appendChild(connect_row);
+            selectArea.appendChild(totalPrice);
+        }
+
+        function MacAppend() {
+            //設定預設圖片
+            img.setAttribute('src', product.Mac.default_img);
+
+            //選項區域
+            let selectArea = setTitle_clearTotalPrice_clearSelectArea(product.Mac.title);
+
+            //選項區域 ： 選顏色
+            let color_row = setRow(product.Mac.color_title);
+            color_row = setColorRow(product.Mac.color, color_row, 'Mac');
+            selectArea.appendChild(color_row);
+
+            //選項區域：選儲存容量
+            let capacity_row = setRow(product.Mac.capacity_title);
+
+            product.Mac.capacity.forEach((item, index) => {
+                let capacity_radio = document.createElement('input');
+                capacity_radio.setAttribute('type', 'radio');
+                capacity_radio.setAttribute('name', "capacity");
+                capacity_radio.setAttribute('id', `${item.gb}-Mac`);
+
+                let capacity_label = document.createElement('label');
+                //這邊要記得設定好click事件觸發後，總價會改變。
+                capacity_label.addEventListener(('click'), function () {
+                    totalPrice.innerText = `${item.cost}`;
+                })
+                capacity_label.setAttribute('for', `${item.gb}-Mac`);
+                capacity_label.classList.add('choose-color', 'btn', 'btn-outline-primary', 'col-5', 'py-4', 'me-3', 'mb-3');
+
+                let capacity_span = document.createElement('span');
+                capacity_span.classList.add('capacity');
+                capacity_span.innerText = item.gb;
+
+                let gb_span = document.createElement('span');
+                gb_span.classList.add('gb');
+                gb_span.innerText = 'GB**';
+
+                let desc_span = document.createElement('span');
+                desc_span.classList.add('desc');
+                desc_span.innerText = item.cost;
+
+                capacity_label.append(capacity_span, gb_span, desc_span);
+                capacity_row.append(capacity_radio, capacity_label);
+            })
+            selectArea.appendChild(capacity_row);
+            selectArea.appendChild(totalPrice);
+        }
+
+        //一開始進來，先展示iPhone頁面
+        iPhoneAppend();
+
+        //點擊IPhone 時，展示iPhone頁面
+        document.querySelector('#iPhone').addEventListener('click', function () {
+            iPhoneAppend();
+        })
+        //點擊IPad時，展示IPad頁面
+        document.querySelector('#iPad').addEventListener('click', function () {
+            iPadAppend();
+        })
+        //點擊IPad時，展示IPad頁面
+        document.querySelector('#Mac').addEventListener('click', function () {
+            MacAppend();
+        })
+    </script>
+
+
+</body></html>
